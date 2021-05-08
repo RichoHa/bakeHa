@@ -52,3 +52,46 @@ function getPics() {
     })
 }
 
+const navHome = document.getElementById("titleNavHome");
+const navMenu = document.getElementById("titleNavMenu");
+const NavFlavours = document.getElementById("titleNavFlavours");
+const NavEnquire = document.getElementById("titleNavEnquire");
+const NavFAQS = document.getElementById("titleNavFAQS");
+
+
+
+const homePage = document.getElementById("homePage");
+const enquirePage = document.getElementById("enquirePage");
+
+navHome.addEventListener("click",function(){hide("titleNavHome")});
+navMenu.addEventListener("click",function(){hide("titleNavMenu")});
+NavFlavours.addEventListener("click",function(){hide("titleNavFlavours")});
+NavEnquire.addEventListener("click",function(){hide("titleNavEnquire")});
+NavFAQS.addEventListener("click",function(){hide("titleNavFAQS")});
+
+
+
+
+function hide(hideElement){
+  homePage.classList.add("hide");
+  // navMenu.classList.add("hide");
+  // NavFlavours.classList.add("hide");
+  enquirePage.classList.add("hide");
+  // NavFAQS.classList.add("hide");
+
+  if(hideElement == "titleNavHome"){
+    homePage.classList.remove("hide");
+  } 
+  // else if (hideElement == "titleNavMenu"){
+  //   navMenu.classList.remove("hide");
+  // }
+  // else if (hideElement == "titleNavFlavours"){
+  //   NavFlavours.classList.remove("hide");
+  // }
+  else if (hideElement == "titleNavEnquire"){
+    enquirePage.classList.remove("hide");
+  }
+  // else if (hideElement == "titleNavFAQS"){
+  //   NavFAQS.classList.remove("hide");
+  // }
+}

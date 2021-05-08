@@ -18,16 +18,16 @@
             <p id="titleInfo">Satisfy your taste-buds by trying some of the many sweets that we have to offer!</p>
         </div>
         <div id="titleNav">
-            <a href="https://www.facebook.com/Bake-Ha-100490115014350/"> HOME</a>
-            <a href="https://www.facebook.com/Bake-Ha-100490115014350/"> MENU</a>
-            <a href="https://www.facebook.com/Bake-Ha-100490115014350/"> FLAVOURS</a>
-            <a href="https://www.facebook.com/Bake-Ha-100490115014350/"> ENQUIRE</a>
-            <a href="https://www.facebook.com/Bake-Ha-100490115014350/"> FAQS</a>
+            <a id="titleNavHome"> HOME</a>
+            <a id="titleNavMenu"> MENU</a>
+            <a id="titleNavFlavours"> FLAVOURS</a>
+            <a id="titleNavEnquire"> ENQUIRE</a>
+            <a id="titleNavFAQS"> FAQS</a>
         </div>
     </div>
 <!-- ---------------------------------------------------------------------------------- -->
 <!-- ---------------------------------------------------------------------------------- -->
-    <div id="homePage" class="hide">
+    <div id="homePage">
         <div id="details">
             <p>
                 CURRENT MESSAGE BOARD
@@ -81,8 +81,8 @@
     </div>
 <!-- ---------------------------------------------------------------------------------- -->
 <!-- ---------------------------------------------------------------------------------- -->
-    <div id="enquirePage" class="hide">
-        <div id="enquirePagedetails">
+    <div id="enquirePage"  class="hide">
+        <div id="enquirePagedetails" class="maxWidth"> 
             <p>
                 To Contact Us:
             </p>
@@ -94,9 +94,9 @@
             </ul>
         </div>
     <!-- ---------------------------------------------------------------------------------- -->
-        <div id="enquireInfo"> 
+        <div id="enquireInfo" class="maxWidth"> 
             <p>Enquire Below:</p>
-            <form id="enquireInfoForms" action="">     b
+            <form id="enquireInfoForms" action="">
                 <div>
                     <label for="name">Name</label>
                     <input name="name" id="name" placeholder="Type Full Name Here" required>
@@ -113,27 +113,27 @@
                     <label for="Request">Description</label>
                     <textarea name="Request" id="Request" placeholder="Type Request Here" ></textarea>
                 </div>
-                <div>
-                    <label for="terms">By checking the box, I have agreed to the following</label>
+                <div id="enquireInfoFormsTerms">
+                    <label for="terms">By checking the box, I have agreed to the following
                     <a href="https://www.facebook.com/Bake-Ha-100490115014350/">terms and condition</a>
-                    <input type="checkbox" name="terms" id="terms">
+                    <input type="checkbox" name="terms" id="terms"></label>
                     <button>Submit</button>
                 </div>
             </form>
 
         </div>   
     <!-- ---------------------------------------------------------------------------------- -->
-      
+    
     </div>
     
 <!-- ---------------------------------------------------------------------------------- -->
 <!-- ---------------------------------------------------------------------------------- -->
 
-<div id="bottomInfo">
-    <a href="https://www.facebook.com/Bake-Ha-100490115014350/"><i class="fab fa-facebook-square fa-lg"></i>acebook</a>
-    <a href="https://www.instagram.com/bake.ha/?hl=en"><i class="fab fa-linkedin fa-lg"></i>stagram</a>
-</div>
+    <div id="bottomInfo">
+        <a href="https://www.facebook.com/Bake-Ha-100490115014350/"><i class="fab fa-facebook-square fa-lg"></i>acebook</a>
+        <a href="https://www.instagram.com/bake.ha/?hl=en"><i class="fab fa-linkedin fa-lg"></i>stagram</a>
 
+    </div>
     <script src='./assets/js/script.js'></script>
 </body>
    
