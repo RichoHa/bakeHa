@@ -4,7 +4,7 @@
     box-sizing: content-box;
     --lightblue:#74a7ef;
     --darkblue:#2579ba;
-    font-family: 'Quicksand', sans-serif;
+    /* font-family: 'Quicksand', sans-serif; */
 }
 
 body{
@@ -28,26 +28,16 @@ a:hover, a:focus{
     color: var(--lightblue);
 }
 
-/*---------------------------------------------------*/
-#topInfo{
-    display:flex;
-    text-align: center;
-    justify-content: space-between;
-    gap: 1.3em;
-}
 
-#topInfo div{
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 1em;
-    gap: 1.3em;
-    font-weight: 700;
-}
+/* .hide{
+    display:none;
+} */
 
-/*---------------------------------------------------*/
+
 
 #titleImg{
-    padding: 1.3em 0 1.3em 0;
+    padding-bottom: 1.1em;
+    font-size: 1.3em;
 }
 
 #titleNav{
@@ -73,7 +63,35 @@ a:hover, a:focus{
     border-bottom: 3px solid var(--lightblue);
 }
 
-#details p:first-child, #cakes{
+#details p:first-child {
+    color: var(--darkblue);
+    font-size: large;
+    font-weight: 900;
+    text-align: left;
+}
+
+#details p:nth-of-type(2){
+    color: black;
+    font-size: 1em;
+    font-weight: 500;
+    text-align: left;
+}
+
+#details ul{
+    color: black;
+    font-size: 1em;
+    font-weight: 700;
+    text-align: left;
+}
+
+/*---------------------------------------------------*/
+
+
+#cakes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: var(--darkblue);
     font-size: large;
     font-weight: 900;
@@ -81,42 +99,78 @@ a:hover, a:focus{
     text-align: left;
 }
 
-#details p:nth-of-type(2){
-    color: black;
-    font-size: 1em;
-    font-weight: 900;
-    font-style: italic;
-    text-align: left;
-}
-
-#details ul{
-    color: black;
-    font-size: 1em;
-    font-weight: 900;
-    font-style: italic;
-    text-align: left;
-}
-
-/*---------------------------------------------------*/
-#imagesContainer{
-    margin-top: 1.3em;
+#cakes {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#cakes{
-    display: block;
+.marquee {
+    width: 90vw;  
+    height: 20vh;
+    color: #eee;
+    overflow: hidden;
+    position: relative;
+    padding:0;
+  }
+  .marquee:before, .marquee:after {
+    position: absolute;
+    top: 0;
+    width: 2em;
+    height: 100%;
+    content: "";
+    z-index: 1;
+  }
+  .marquee:before {
+    left: 0;
+    background: linear-gradient(to right, white 0%, transparent 100%);
+  }
+  .marquee:after {
+    right: 0;
+    background: linear-gradient(to left, white 0%, transparent 100%);
+  }
+  .marquee-content {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    animation: scrolling 20s linear infinite;
+  }
+
+  .marquee-content:hover,  .marquee-content:focus {
+    animation-play-state: paused;
+  }
+
+  @keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-180vw); }
+    /* 180 = Number of stuff(9) * width(20)*/
+  }
+  .marquee-content li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 20vw;
+    max-height: 100%;
+    white-space: nowrap;
+  }
+  
+  .marquee-content li img {
     width: 100%;
-    border: black;
+    height: 100%;
+    border: 5px solid white;
+  }
 
-}
 
-#cakesImageContainter img, #img {
-    width:30%;
-    height: 100px;
-    border-radius: 10px;
+  /*---------------------------------------------------*/
+#bottomInfo{
+    display:flex;
+    text-align: center;
+    justify-content: flex-end;
+    font-size: 1.3em;
+    gap: 1.3em;
+    font-weight: 700;
 }
 
 /*---------------------------------------------------*/
